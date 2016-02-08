@@ -1,0 +1,29 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+    <dimen name="large_text_size">18sp</dimen>
+    <dimen name="very_large_text_size">20sp</dimen>
+    <dimen name="largest_text_size">24sp</dimen>
+
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="large_margin">32dp</dimen>
+    <dimen name="spinner_margin">20dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="smallest_margin">4dp</dimen>
+
+    <dimen name="header_widget_height">70dp</dimen>
+    <dimen name="dialog_progress_size">40dp</dimen>
+    <dimen name="min_header_lesson_height">50dp</dimen>
+    <dimen name="item_favorite_size">70dp</dimen>
+    <dimen name="item_pick_size">70dp</dimen>
+    <dimen name="item_pick_value_size">50dp</dimen>
+    <dimen name="item_timetable_size">70dp</dimen>
+    <dimen name="item_timetable_day_size">60dp</dimen>
+    <dimen name="login_header_height">50dp</dimen>
+    <dimen name="widget_min_width">300dp</dimen>
+    <dimen name="widget_min_height">200dp</dimen>
+
+</resources>

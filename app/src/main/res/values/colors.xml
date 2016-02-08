@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimaryLight">#B3E5FC</color>
+    <color name="colorTextIcons">#FFFFFF</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDevinderText">#B6B6B6</color>
+    <color name="colorPurple">#7C4DFF</color>
+    <color name="colorRed">#D32F2F</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorClickedWidgetButton">#50FFFFFF</color>
+
+</resources>

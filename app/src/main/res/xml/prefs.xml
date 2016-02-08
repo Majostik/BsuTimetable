@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jenzz.materialpreference.PreferenceCategory android:title="Основные настройки">
+        <com.jenzz.materialpreference.Preference
+            android:key="changevalue"
+            android:title="Сохраненная информация"
+            android:summary="Выбранная информация"
+            />
+
+        <com.jenzz.materialpreference.SwitchPreference
+            android:key="autoupdate"
+            android:title="Автоматическое обновление"
+            android:summaryOn="Включено"
+            android:summaryOff="Выключено"
+            />
+        <com.jenzz.materialpreference.SwitchPreference
+            android:key="notification"
+            android:title="Уведомления о начале пар"
+            android:summaryOn="Включено"
+            android:summaryOff="Выключено"
+            />
+        <com.jenzz.materialpreference.Preference
+            android:key="fullupdate"
+            android:title="Обновление расписания"
+            android:summary="Полное обнолвение базы расписания"
+            />
+        <com.jenzz.materialpreference.Preference
+            android:key="feedback"
+            android:title="Обратная связь"
+            android:summary="Отправить фидбэк на почту"
+            />
+        <com.jenzz.materialpreference.Preference
+            android:key="version"
+            android:title="Версия"
+            />
+
+    </com.jenzz.materialpreference.PreferenceCategory>
+</PreferenceScreen>

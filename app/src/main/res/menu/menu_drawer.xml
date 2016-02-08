@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home"
+            android:checked="true"
+            android:icon="@drawable/ic_account_circle_black_48dp"
+            android:title="@string/drawer_home"/>
+        <item
+            android:id="@+id/drawer_favorites"
+            android:icon="@drawable/ic_star_black_48dp"
+            android:title="@string/drawer_favorites"/>
+
+        <item
+            android:id="@+id/drawer_timetable"
+            android:icon="@drawable/ic_view_list_black_48dp"
+            android:title="@string/drawer_timetable"/>
+
+        <item
+            android:id="@+id/drawer_settings"
+            android:icon="@drawable/ic_settings_black_48dp"
+            android:title="@string/drawer_settings"/>
+
+    </group>
+
+</menu>

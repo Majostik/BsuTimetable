@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Расписание БГУ</string>
+
+    <string name="drawer_favorites">Избранное</string>
+    <string name="drawer_home">Мое расписание</string>
+    <string name="drawer_timetable">Расписание</string>
+    <string name="drawer_news">Новости</string>
+    <string name="drawer_settings">Настройки</string>
+    <string name="drawer_about">О программе</string>
+    <string name="login_save">Сохранить</string>
+    <string name="login_descrpition">Пожалуйста, выберите свою группу/фамилию.</string>
+    <string name="pick_search">Поиск</string>
+    <string name="navigation_drawer_open">drawer_open</string>
+    <string name="navigation_drawer_close">drawer_close</string>
+    <string name="first_week_current">1 неделя (Т)</string>
+    <string name="second_week">2 неделя</string>
+    <string name="first_week">1 неделя</string>
+    <string name="second_week_current">2 неделя (Т)</string>
+    <string name="lesson_type_lb">ЛБ</string>
+    <string name="lesson_type_lc">ЛК</string>
+    <string name="lesson_type_pr">ПР</string>
+    <string name="lesson_type_of">ЗЧ</string>
+    <string name="lesson_type_ex">ЭК</string>
+    <string name="current_day">Текущий день</string>
+    <string name="today">%s (Сегодня)</string>
+    <string name="internet_error">Отсутствует подключение к интернету</string>
+    <string name="download_error">Возникла ошибка при обновление базы данных</string>
+    <string name="settings_update">fullupdate</string>
+    <string name="settings_changevalue">changevalue</string>
+    <string name="settings_autoupdate">autoupdate</string>
+    <string name="settings_notification">notification</string>
+    <string name="settings_feedback">feedback</string>
+    <string name="settings_version">version</string>
+    <string name="feedback_mail">majostik@mail.ru</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="preference_firsttime">first_time_after_update</string>
+    <string name="preference_name">settings</string>
+    <string name="preference_user_type">type</string>
+    <string name="preference_user_value">value</string>
+    <string name="preference_widget_date">date</string>
+    <string name="preference_notification">notification_enable</string>
+    <string name="preference_update_enable">automatic_update</string>
+    <string name="preference_update_date">automatic_update_date</string>
+    <string name="preference_update_default_date">2016-02-08</string>
+    <string name="update_title">Обновление расписания</string>
+    <string name="update_desrciption">Обновить базу расписания?(Может потребоваться несколько минут)</string>
+    <string name="update_ok">Ок</string>
+    <string name="update_cancel">Отменить</string>
+    <string name="lessons_empty">Сегодня пары отсутствуют</string>
+    <string name="start_alarm">start_alarm</string>
+
+    <string-array name="timetable_array">
+        <item>Очные группы</item>
+        <item>Преподаватели</item>
+        <item>Заочные группы</item>
+        <item>Полная занятость преподавателей</item>
+        <item>Циклы</item>
+        <item>Полная занятость аудиторий</item>
+        <item>Сессия</item>
+    </string-array>
+
+    <string-array name="timetable_array_for_login">
+        <item>Очные группы</item>
+        <item>Преподаватели</item>
+        <item>Заочные группы</item>
+        <item>Полная занятость преподавателей</item>
+        <item>Циклы</item>
+    </string-array>
+</resources>

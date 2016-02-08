@@ -1,0 +1,9 @@
+<appwidget-provider
+ 	xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:initialLayout="@layout/appwidget_timetable"
+ 	android:minHeight="@dimen/widget_min_height"
+	android:minWidth="@dimen/widget_min_width"
+ 	android:resizeMode="horizontal|vertical"
+	android:previewImage="@drawable/prevw"
+	android:updatePeriodMillis="2400000">
+</appwidget-provider>
