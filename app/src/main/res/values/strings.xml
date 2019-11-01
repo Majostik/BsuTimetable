@@ -33,21 +33,23 @@
     <string name="settings_version">version</string>
     <string name="feedback_mail">majostik@mail.ru</string>
     <string name="feedback_title">Feedback</string>
-    <string name="preference_firsttime">first_time_after_update</string>
+    <string name="preference_firsttime">first_time_after_update_2</string>
     <string name="preference_name">settings</string>
     <string name="preference_user_type">type</string>
     <string name="preference_user_value">value</string>
     <string name="preference_widget_date">date</string>
+    <string name="preference_user_week">week</string>
     <string name="preference_notification">notification_enable</string>
     <string name="preference_update_enable">automatic_update</string>
     <string name="preference_update_date">automatic_update_date</string>
-    <string name="preference_update_default_date">2016-02-08</string>
+    <string name="preference_update_default_date">2019-11-01</string>
     <string name="update_title">Обновление расписания</string>
     <string name="update_desrciption">Обновить базу расписания?(Может потребоваться несколько минут)</string>
     <string name="update_ok">Ок</string>
     <string name="update_cancel">Отменить</string>
     <string name="lessons_empty">Сегодня пары отсутствуют</string>
     <string name="start_alarm">start_alarm</string>
+    <string name="login_week_default">Выбор четной недели по умолчанию</string>
 
     <string-array name="timetable_array">
         <item>Очные группы</item>

@@ -37,6 +37,10 @@ public class LoginPresenter extends BasePresenter<LoginView> {
         mSubscription = getSubscribe(type);
     }
 
+    public void setWeek(int week){
+        mSharedPreferenceHelper.saveWeek(week);
+    }
+
     private Subscription getSubscribe(int type) {
         return mDatabaseManager
                 .getHintList(type)
@@ -48,11 +52,12 @@ public class LoginPresenter extends BasePresenter<LoginView> {
                 });
     }
 
-    public void saveValue(User user){
+    public void saveValue(User user, int week){
         if (mHintList.contains(user.getValue())) {
             if (user.isUserATeacher())
                 user.setValue(mDatabaseManager.convertNameToId(user.getValue()));
             mSharedPreferenceHelper.saveValue(user);
+            mSharedPreferenceHelper.saveWeek(week);
             getView().replaceFragment(user);
 
         }

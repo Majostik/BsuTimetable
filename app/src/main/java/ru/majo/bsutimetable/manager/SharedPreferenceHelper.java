@@ -27,8 +27,8 @@ public class SharedPreferenceHelper {
     }
 
     public boolean isFirstTime(){
-        if (!mSharedPreferences.getBoolean(mContext.getString(R.string.preference_firsttime), false)){
-            mSharedPreferences.edit().putBoolean(mContext.getString(R.string.preference_firsttime),true).commit();
+        if (mSharedPreferences.getBoolean(mContext.getString(R.string.preference_firsttime), false) == false){
+            mSharedPreferences.edit().putBoolean(mContext.getString(R.string.preference_firsttime), true).commit();
             return true;
         } else
             return false;
@@ -90,5 +90,13 @@ public class SharedPreferenceHelper {
                 mContext.getString(R.string.preference_update_default_date)));
         return mSharedPreferences.getString(mContext.getString(R.string.preference_update_date),
                 mContext.getString(R.string.preference_update_default_date));
+    }
+
+    public void saveWeek(int week){
+        mSharedPreferences.edit().putInt(mContext.getString(R.string.preference_user_week), week).commit();
+    }
+
+    public int getWeek() {
+        return mSharedPreferences.getInt(mContext.getString(R.string.preference_user_week), -1);
     }
 }

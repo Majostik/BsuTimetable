@@ -8,15 +8,19 @@
         android:layout_height="@dimen/login_header_height"
         android:orientation="horizontal"
         android:background="@color/colorPrimary">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/medium_margin"
             android:textColor="@android:color/white"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/login_descrpition"/>
+
     </LinearLayout>
+
     <Spinner
         android:id="@+id/login_spinner"
         android:layout_width="match_parent"
@@ -24,6 +28,7 @@
         android:layout_marginLeft="@dimen/medium_margin"
         android:layout_marginRight="@dimen/medium_margin"
         android:layout_height="wrap_content"/>
+
     <View
         android:layout_height="1.5dp"
         android:layout_width="match_parent"
@@ -31,6 +36,7 @@
         android:layout_marginLeft="@dimen/spinner_margin"
         android:layout_marginRight="@dimen/spinner_margin"
         android:layout_marginBottom="@dimen/medium_margin"/>
+
     <AutoCompleteTextView
         android:id="@+id/login_autotextview"
         android:layout_width="match_parent"
@@ -38,6 +44,24 @@
         android:layout_marginRight="@dimen/medium_margin"
         android:layout_marginBottom="@dimen/medium_margin"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/login_week_default"/>
+
+    <Spinner
+        android:id="@+id/week_spinner"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/login_save_button"
         android:layout_height="wrap_content"
@@ -46,4 +70,5 @@
         android:layout_marginRight="@dimen/medium_margin"
         style="@style/Widget.AppCompat.Button.Colored"
         android:text="@string/login_save"/>
+
 </LinearLayout>

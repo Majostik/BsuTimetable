@@ -101,16 +101,31 @@ public class TimetableFragment extends BaseFragment implements TimetableView {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
 
-        if (TimetableUtils.getParity(TimetableUtils.todayDate()) == 1){
-            adapter.addFrag(mFragmentArrayList.get(0), getString(R.string.first_week_current));
-            adapter.addFrag(mFragmentArrayList.get(1), getString(R.string.second_week));
+        int week = mTimetablePresenter.getWeek();
+
+        if (week != -1) {
+            if (week == 1) {
+                adapter.addFrag(mFragmentArrayList.get(0), getString(R.string.first_week_current));
+                adapter.addFrag(mFragmentArrayList.get(1), getString(R.string.second_week));
+            } else {
+                adapter.addFrag(mFragmentArrayList.get(0), getString(R.string.first_week));
+                adapter.addFrag(mFragmentArrayList.get(1), getString(R.string.second_week_current));
+            }
         } else {
-            adapter.addFrag(mFragmentArrayList.get(0), getString(R.string.first_week));
-            adapter.addFrag(mFragmentArrayList.get(1), getString(R.string.second_week_current));
+            if (TimetableUtils.getParity(TimetableUtils.todayDate()) == 1) {
+                adapter.addFrag(mFragmentArrayList.get(0), getString(R.string.first_week_current));
+                adapter.addFrag(mFragmentArrayList.get(1), getString(R.string.second_week));
+            } else {
+                adapter.addFrag(mFragmentArrayList.get(0), getString(R.string.first_week));
+                adapter.addFrag(mFragmentArrayList.get(1), getString(R.string.second_week_current));
+            }
         }
         viewPager.setAdapter(adapter);
-        viewPager.setCurrentItem(TimetableUtils.getParity(TimetableUtils.todayDate())-1);
-
+        if (week != -1) {
+            viewPager.setCurrentItem(week - 1);
+        } else  {
+            viewPager.setCurrentItem(TimetableUtils.getParity(TimetableUtils.todayDate()) - 1);
+        }
     }
 
     @Override

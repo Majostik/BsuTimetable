@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import ru.majo.bsutimetable.base.BasePresenter;
 import ru.majo.bsutimetable.manager.DatabaseManager;
+import ru.majo.bsutimetable.manager.SharedPreferenceHelper;
 import ru.majo.bsutimetable.model.MonthWithDays;
 import ru.majo.bsutimetable.model.User;
 import ru.majo.bsutimetable.ui.view.TimetableView;
@@ -17,10 +18,13 @@ import ru.majo.bsutimetable.utils.TimetableUtils;
 public class TimetablePresenter extends BasePresenter<TimetableView> {
 
     private DatabaseManager mDatabaseManager;
+    private SharedPreferenceHelper mSharedPreferenceHelper;
     ArrayList<String> mList;
+
     @Inject
-    public TimetablePresenter(DatabaseManager databaseManager){
+    public TimetablePresenter(DatabaseManager databaseManager, SharedPreferenceHelper sharedPreferenceHelper){
         mDatabaseManager = databaseManager;
+        mSharedPreferenceHelper = sharedPreferenceHelper;
     }
 
     public void setUser(User user){
@@ -35,6 +39,10 @@ public class TimetablePresenter extends BasePresenter<TimetableView> {
         else{
             getView().showFullTimeTimetable();
         }
+    }
+
+    public int getWeek() {
+        return mSharedPreferenceHelper.getWeek();
     }
 
 }

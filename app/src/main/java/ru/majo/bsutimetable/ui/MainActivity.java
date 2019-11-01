@@ -195,6 +195,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mPresenter.isTodayToUpdate();
     }
 
+    @Override
+    public void onFinishFirstTime() {
+        if (mDialog!=null && mDialog.isShowing()){
+            mDialog.dismiss();
+        }
+        mPresenter.onInitFirstFragment();
+    }
+
     private void setBackstackIndicator() {
         int backCount = getSupportFragmentManager().getBackStackEntryCount();
         if (backCount == 0) {

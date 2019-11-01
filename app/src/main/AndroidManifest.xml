@@ -37,19 +37,21 @@
                 android:resource="@xml/widget_metadata">
             </meta-data>
         </receiver>
-        <service
-            android:name=".service.AlarmService"
-            android:label="AlarmServiceLabel" android:enabled="true"/>
-        <service
-            android:name=".service.NotificationService"
-            android:label="NotificationServiceLabel" android:enabled="true"/>
-        <receiver
-            android:name=".receiver.AlarmReceiver"/>
-        <receiver android:name=".receiver.BootReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
+
+<!--        <service-->
+<!--            android:name=".service.AlarmService"-->
+<!--            android:label="AlarmServiceLabel" android:enabled="true"/>-->
+<!--        <service-->
+<!--            android:name=".service.NotificationService"-->
+<!--            android:label="NotificationServiceLabel" android:enabled="true"/>-->
+<!--        <receiver-->
+<!--            android:name=".receiver.AlarmReceiver"/>-->
+<!--        <receiver android:name=".receiver.BootReceiver">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
     </application>
 
 </manifest>

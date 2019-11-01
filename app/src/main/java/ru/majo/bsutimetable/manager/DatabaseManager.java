@@ -48,6 +48,8 @@ public class DatabaseManager {
     public Observable<Boolean> writeDatabase(){
         return Observable.create(subscriber -> {
             try {
+                Log.e("db","onWriteDatabase");
+
                 AssetManager assetManager = mContext.getResources().getAssets();
                 InputStream inputStream = assetManager.open("stud.db");
                 String outFileName = "data/data/ru.majo.bsutimetable/databases/stud.db";
@@ -61,10 +63,14 @@ public class DatabaseManager {
                 fileOutputStream.flush();
                 fileOutputStream.close();
                 inputStream.close();
+                Log.e("db","complete");
 
                 subscriber.onNext(true);
                 subscriber.onCompleted();
+
             } catch (Exception e) {
+                Log.e("db","error " + e.getMessage());
+
                 subscriber.onError(e);
             }
         });

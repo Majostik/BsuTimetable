@@ -1,6 +1,7 @@
 package ru.majo.bsutimetable.presenter;
 
 import android.content.Context;
+import android.util.Log;
 
 import javax.inject.Inject;
 
@@ -10,6 +11,7 @@ import ru.majo.bsutimetable.manager.DatabaseManager;
 import ru.majo.bsutimetable.manager.NetworkManager;
 import ru.majo.bsutimetable.manager.SharedPreferenceHelper;
 import ru.majo.bsutimetable.model.User;
+import ru.majo.bsutimetable.ui.MainActivity;
 import ru.majo.bsutimetable.ui.view.MainView;
 import ru.majo.bsutimetable.utils.TimetableUtils;
 import rx.android.schedulers.AndroidSchedulers;
@@ -52,13 +54,18 @@ public class MainPresenter extends BasePresenter<MainView> {
     }
 
     public void onWriteDatabase(){
+        Log.e("db","onWriteDatabase");
         if (mSharedPreferenceHelper.isFirstTime()) {
             getView().onStartProgress();
-            mSubscription = mDatabaseManager
-                    .writeDatabase()
-                    .subscribeOn(Schedulers.io())
+            mSubscription =  mNetworkManager.donwloadFullDatabase()
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(res -> getView().onFinishProgress());
+                    .subscribeOn(Schedulers.newThread())
+                    .subscribe(aBoolean -> {
+                        getView().onFinishFirstTime();
+                        mSharedPreferenceHelper.setAutomaticUpdateDate(TimetableUtils.todayDate());
+                    }, error -> {
+                        getView().onFinishProgress();
+                    });
         }
     }
 
@@ -79,13 +86,14 @@ public class MainPresenter extends BasePresenter<MainView> {
                         mSharedPreferenceHelper.setAutomaticUpdateDate(TimetableUtils.todayDate());
                         getView().onFinishProgress();
                     },throwable -> {
-                        mDatabaseManager.writeDatabase()
-                                .observeOn(AndroidSchedulers.mainThread())
-                                .subscribeOn(Schedulers.newThread())
-                                .subscribe(bool -> {
-                                    getView().onFinishProgress();
-                                    getView().showErrorToast(mContext.getString(R.string.download_error));
-                                });
+                        getView().onFinishProgress();
+//                        mDatabaseManager.writeDatabase()
+//                                .observeOn(AndroidSchedulers.mainThread())
+//                                .subscribeOn(Schedulers.newThread())
+//                                .subscribe(bool -> {
+//                                    getView().onFinishProgress();
+//                                    getView().showErrorToast(mContext.getString(R.string.download_error));
+//                                });
                     });
         } else
             getView().showErrorToast(mContext.getString(R.string.internet_error));

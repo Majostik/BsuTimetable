@@ -38,10 +38,13 @@ public class LoginFragment extends BaseFragment implements LoginView{
     Spinner mSpinner;
     @BindView(R.id.login_autotextview)
     AutoCompleteTextView mAutoCompleteTextView;
+    @BindView(R.id.week_spinner)
+    Spinner mWeekSpinner;
 
     @Inject
     LoginPresenter mLoginPresenter;
 
+    private String[] weeks = new String[]{"1 неделя", "2 неделя"};
 
     public static LoginFragment newInstance(boolean isFromSettings){
         LoginFragment loginFragment = new LoginFragment();
@@ -73,6 +76,22 @@ public class LoginFragment extends BaseFragment implements LoginView{
         mSpinner.setAdapter(new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_spinner_dropdown_item,
                 TimetableUtils.getTimetableArrayForLogin(getActivity())));
+        mWeekSpinner.setOnItemSelectedListener(
+                new AdapterView.OnItemSelectedListener() {
+                    public void onItemSelected(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        mLoginPresenter.setWeek(position + 1);
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+        mWeekSpinner.setAdapter(new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_spinner_dropdown_item,
+                weeks));
+
         mSpinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     public void onItemSelected(
@@ -105,6 +124,8 @@ public class LoginFragment extends BaseFragment implements LoginView{
 
     @OnClick(R.id.login_save_button)
     public void onClick(){
-        mLoginPresenter.saveValue(new User(mSpinner.getSelectedItemPosition(), mAutoCompleteTextView.getText().toString()));
+        mLoginPresenter.saveValue(
+                new User(mSpinner.getSelectedItemPosition(), mAutoCompleteTextView.getText().toString()),
+                mWeekSpinner.getSelectedItemPosition() + 1);
     }
 }

@@ -11,6 +11,7 @@ public interface MainView extends BaseView {
     void showMainFragment(User user);
     void setNavigationHeader(User user);
     void onStartProgress();
+    void onFinishFirstTime();
     void onFinishProgress();
     void showUpdateDialog();
     void showErrorToast(String errorText);

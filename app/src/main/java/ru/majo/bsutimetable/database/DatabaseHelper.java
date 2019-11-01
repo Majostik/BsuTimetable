@@ -103,7 +103,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         arg0.execSQL(CREATE_TABLE_TEACHERS);
         arg0.execSQL(CREATE_TABLE_SAVED);
 
-
         arg0.execSQL("CREATE INDEX idx_auditory ON " + TABLE_AUDITORY + "(" + AUD_AUDITORY + ")");
         arg0.execSQL("CREATE INDEX idx_dmain ON " + TABLE_DMAIN + "(" + GRUP_DMAIN + ")");
         arg0.execSQL("CREATE INDEX idx_group ON " + TABLE_GROUP + "(" + GRUP_GROUP + ")");
