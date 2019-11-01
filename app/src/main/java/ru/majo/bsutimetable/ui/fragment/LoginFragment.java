@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -34,6 +35,8 @@ public class LoginFragment extends BaseFragment implements LoginView{
 
     public static final String EXTRA_FROM_SETTINGS = "ru.majo.bsutimetable.extra.FROM_SETTINGSG";
 
+    @BindView(R.id.login_container)
+    LinearLayout mLinearLayout;
     @BindView(R.id.login_spinner)
     Spinner mSpinner;
     @BindView(R.id.login_autotextview)
@@ -65,10 +68,15 @@ public class LoginFragment extends BaseFragment implements LoginView{
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        dissmissKeyboard(mLinearLayout);
+    }
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         mLoginPresenter.onDestroy();
-        dissmissKeyboard();
     }
 
     @Override

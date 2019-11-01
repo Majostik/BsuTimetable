@@ -36,6 +36,8 @@ public class PickValueFragment extends BaseFragment implements PickValueView{
 
     public static final String EXTRA_TYPE = "ru.majo.bsutimetable.EXTRA_TYPE";
 
+    @BindView(R.id.pick_value_layout)
+    LinearLayout mLinearLayout;
     @BindView(R.id.pick_value_recyclerview)
     RecyclerView mValueRecyclerView;
     @BindView(R.id.pick_edittext_search)
@@ -75,10 +77,15 @@ public class PickValueFragment extends BaseFragment implements PickValueView{
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        dissmissKeyboard(mLinearLayout);
+    }
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         mPresenter.onDestroy();
-        dissmissKeyboard();
     }
 
     @Override
