@@ -96,12 +96,12 @@ public class TimetableFragment extends BaseFragment implements TimetableView {
 
     private void setupTabs(NonSwipeableViewPager viewPager, User user) {
         mFragmentArrayList = new ArrayList<>();
-        mFragmentArrayList.add(FullTimeDaysFragment.newInstance(new TransmittedInfo(user, 1)));
-        mFragmentArrayList.add(FullTimeDaysFragment.newInstance(new TransmittedInfo(user, 2)));
+        int week = mTimetablePresenter.getWeek();
+
+        mFragmentArrayList.add(FullTimeDaysFragment.newInstance(new TransmittedInfo(user, 1, week)));
+        mFragmentArrayList.add(FullTimeDaysFragment.newInstance(new TransmittedInfo(user, 2, week)));
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-
-        int week = mTimetablePresenter.getWeek();
 
         if (week != -1) {
             if (week == 1) {

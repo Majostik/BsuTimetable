@@ -59,14 +59,21 @@ public class FullTimeDaysFragment extends BaseFragment{
     }
 
     private void setCurrent(ViewPager viewPager,TransmittedInfo transmittedInfo){
-        if (transmittedInfo.getWeek() == TimetableUtils.getParity(TimetableUtils.todayDate()) && TimetableUtils.todayDay()!=7)
+        if ((transmittedInfo.getSelectWeek() == -1 &&
+                transmittedInfo.getWeek() == TimetableUtils.getParity(TimetableUtils.todayDate())) ||
+                (transmittedInfo.getSelectWeek() == transmittedInfo.getWeek()) &&
+                TimetableUtils.todayDay()!=7)
             viewPager.setCurrentItem(TimetableUtils.todayDay()-1);
     }
 
     private void setupViewPager(ViewPager viewPager,TransmittedInfo transmittedInfo) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         for (int i=0;i<6;i++){
-            adapter.addFrag(FullTimeLessonsFragment.newInstance(new TransmittedInfo(transmittedInfo.getUser(), transmittedInfo.getWeek(), i + 1)), TimetableUtils.getShortDay(i));
+            adapter.addFrag(FullTimeLessonsFragment.newInstance(new TransmittedInfo(
+                    transmittedInfo.getUser(),
+                    transmittedInfo.getWeek(),
+                    i + 1,
+                    transmittedInfo.getSelectWeek())), TimetableUtils.getShortDay(i));
         }
         viewPager.setAdapter(adapter);
         //viewPager.setOffscreenPageLimit(5);

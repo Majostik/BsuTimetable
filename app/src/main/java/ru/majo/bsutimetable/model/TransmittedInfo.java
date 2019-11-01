@@ -11,20 +11,23 @@ public class TransmittedInfo implements Serializable{
     private int mDay;
     private int mWeek;
     private String mDate;
+    private int mSelectWeek;
 
     public TransmittedInfo(){
 
     }
 
-    public TransmittedInfo(User user, int week) {
+    public TransmittedInfo(User user, int week, int selectWeek) {
         mUser = user;
         mWeek = week;
+        mSelectWeek = selectWeek;
     }
 
-    public TransmittedInfo(User user, int week, int day) {
+    public TransmittedInfo(User user, int week, int day, int selectWeek) {
         mUser = user;
         mDay = day;
         mWeek = week;
+        mSelectWeek = selectWeek;
     }
 
     public TransmittedInfo(User user, String date){
@@ -62,6 +65,10 @@ public class TransmittedInfo implements Serializable{
 
     public void setDate(String date) {
         mDate = date;
+    }
+
+    public int getSelectWeek() {
+        return mSelectWeek;
     }
 
     @Override
