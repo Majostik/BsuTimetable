@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -74,13 +74,13 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        @Bind(R.id.favorite_abbreviation)
+        @BindView(R.id.favorite_abbreviation)
         TextView mAbbreviationTextView;
-        @Bind(R.id.favorite_type)
+        @BindView(R.id.favorite_type)
         TextView mTypeTextView;
-        @Bind(R.id.favorite_value)
+        @BindView(R.id.favorite_value)
         TextView mValueTextView;
-        @Bind(R.id.favorite_layout)
+        @BindView(R.id.favorite_layout)
         LinearLayout mItemLayout;
 
         public ViewHolder(View itemView) {

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -31,9 +31,9 @@ public class FullTimeLessonsFragment extends BaseFragment implements LessonsView
 
     public static final String EXTRA_INFO = "ru.majo.bsutimetable.extra.INFO";
 
-    @Bind(R.id.days_empty_textview)
+    @BindView(R.id.days_empty_textview)
     TextView mEmptyTextView;
-    @Bind(R.id.days_recylcerview)
+    @BindView(R.id.days_recylcerview)
     RecyclerView mRecyclerView;
 
     @Inject

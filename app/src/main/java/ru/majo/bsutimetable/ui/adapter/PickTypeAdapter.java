@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.R;
 import ru.majo.bsutimetable.utils.TimetableUtils;
@@ -70,11 +70,11 @@ public class PickTypeAdapter extends RecyclerView.Adapter<PickTypeAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        @Bind(R.id.pick_item_type_abbreviation)
+        @BindView(R.id.pick_item_type_abbreviation)
         TextView mAbbreviationTextView;
-        @Bind(R.id.pick_item_type_value)
+        @BindView(R.id.pick_item_type_value)
         TextView mValueTextView;
-        @Bind(R.id.pick_item_type_layout)
+        @BindView(R.id.pick_item_type_layout)
         LinearLayout mLinearLayout;
 
         public ViewHolder(View itemView) {

@@ -77,17 +77,6 @@ public class SettingsFragment extends PreferenceFragment {
             return false;
         });
 
-        SwitchPreference notifcationPreference = (SwitchPreference)findPreference(getString(R.string.settings_notification));
-        notifcationPreference.setDefaultValue(mSharedPreferenceHelper.isNotificationEnabled());
-        notifcationPreference.setOnPreferenceClickListener(preference -> {
-            if (notifcationPreference.isChecked())
-                AlarmUtils.startAlarmService(getActivity());
-            else
-                AlarmUtils.stopAlarmService(getActivity());
-            mSharedPreferenceHelper.setNotificationEnable(notifcationPreference.isChecked());
-            return false;
-        });
-
         Preference feedbackPreference = (Preference)findPreference(getString(R.string.settings_feedback));
         feedbackPreference.setOnPreferenceClickListener(preference -> {
             sendFeedBack();

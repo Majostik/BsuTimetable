@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ru.majo.bsutimetable.Application;
@@ -34,9 +34,9 @@ public class LoginFragment extends BaseFragment implements LoginView{
 
     public static final String EXTRA_FROM_SETTINGS = "ru.majo.bsutimetable.extra.FROM_SETTINGSG";
 
-    @Bind(R.id.login_spinner)
+    @BindView(R.id.login_spinner)
     Spinner mSpinner;
-    @Bind(R.id.login_autotextview)
+    @BindView(R.id.login_autotextview)
     AutoCompleteTextView mAutoCompleteTextView;
 
     @Inject

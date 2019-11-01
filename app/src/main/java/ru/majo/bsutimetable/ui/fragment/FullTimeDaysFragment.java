@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.R;
 import ru.majo.bsutimetable.base.BaseFragment;
@@ -23,9 +23,9 @@ public class FullTimeDaysFragment extends BaseFragment{
 
     public static final String EXTRA_INFO = "ru.majo.bsutimetable.extra.INFO";
 
-    @Bind(R.id.days_tabs)
+    @BindView(R.id.days_tabs)
     TabLayout mTabLayout;
-    @Bind(R.id.days_viewpager)
+    @BindView(R.id.days_viewpager)
     ViewPager mViewPager;
 
     private TransmittedInfo mTransmittedInfo;

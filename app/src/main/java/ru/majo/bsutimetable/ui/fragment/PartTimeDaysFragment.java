@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.R;
 import ru.majo.bsutimetable.base.BaseFragment;
@@ -28,7 +28,7 @@ public class PartTimeDaysFragment extends BaseFragment {
     public static final String EXTRA_CURRENT = "ru.majo.bsutimetable.extra.CURRENT";
 
 
-    @Bind(R.id.days_recyclerview)
+    @BindView(R.id.days_recyclerview)
     RecyclerView mRecyclerView;
 
     private PartTimeDaysAdapter mAdapter;

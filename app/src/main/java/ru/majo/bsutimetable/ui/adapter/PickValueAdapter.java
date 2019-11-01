@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -87,13 +87,13 @@ public class PickValueAdapter extends RecyclerView.Adapter<PickValueAdapter.View
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        @Bind(R.id.pick_item_layout_star)
+        @BindView(R.id.pick_item_layout_star)
         LinearLayout mStarLayout;
-        @Bind(R.id.pick_item_image_star)
+        @BindView(R.id.pick_item_image_star)
         ImageView mStarImage;
-        @Bind(R.id.pick_item_value_layout)
+        @BindView(R.id.pick_item_value_layout)
         LinearLayout mItemLayout;
-        @Bind(R.id.pick_item_value_textview)
+        @BindView(R.id.pick_item_value_textview)
         TextView mValueTextView;
 
         public ViewHolder(View itemView) {

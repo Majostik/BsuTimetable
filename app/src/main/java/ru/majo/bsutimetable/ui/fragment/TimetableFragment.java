@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -34,11 +34,11 @@ public class TimetableFragment extends BaseFragment implements TimetableView {
 
     public static final String EXTRA_USER = "ru.majo.bsutimetable.extra.USER";
 
-    @Bind(R.id.main_tabs)
+    @BindView(R.id.main_tabs)
     TabLayout mTabLayout;
-    @Bind(R.id.main_viewpager)
+    @BindView(R.id.main_viewpager)
     ViewPager mViewPager;
-    @Bind(R.id.main_non_swipeable_viewpager)
+    @BindView(R.id.main_non_swipeable_viewpager)
     NonSwipeableViewPager mNonSwipeableViewPager;
 
     @Inject

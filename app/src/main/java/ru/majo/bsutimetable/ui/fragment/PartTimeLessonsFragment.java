@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -32,13 +32,13 @@ public class PartTimeLessonsFragment extends BaseFragment implements LessonsView
 
     public static final String EXTRA_INFO = "ru.majo.bsutimetable.extra.INFO";
 
-    @Bind(R.id.lessons_empty_textview)
+    @BindView(R.id.lessons_empty_textview)
     TextView mEmptyTextView;
-    @Bind(R.id.lessons_recyclerview)
+    @BindView(R.id.lessons_recyclerview)
     RecyclerView mRecyclerView;
-    @Bind(R.id.lessons_day_textview)
+    @BindView(R.id.lessons_day_textview)
     TextView mDayTextView;
-    @Bind(R.id.lessons_day_of_week_textview)
+    @BindView(R.id.lessons_day_of_week_textview)
     TextView mDayOfWeekTextView;
 
     @Inject

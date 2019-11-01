@@ -13,12 +13,6 @@
             android:summaryOn="Включено"
             android:summaryOff="Выключено"
             />
-        <com.jenzz.materialpreference.SwitchPreference
-            android:key="notification"
-            android:title="Уведомления о начале пар"
-            android:summaryOn="Включено"
-            android:summaryOff="Выключено"
-            />
         <com.jenzz.materialpreference.Preference
             android:key="fullupdate"
             android:title="Обновление расписания"

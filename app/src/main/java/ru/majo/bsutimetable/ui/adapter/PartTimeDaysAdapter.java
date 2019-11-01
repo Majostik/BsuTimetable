@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.R;
 import ru.majo.bsutimetable.utils.TimetableUtils;
@@ -62,13 +62,13 @@ public class PartTimeDaysAdapter extends RecyclerView.Adapter<PartTimeDaysAdapte
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        @Bind(R.id.day_layout)
+        @BindView(R.id.day_layout)
         LinearLayout mDayLayout;
-        @Bind(R.id.day_abbreviation_textview)
+        @BindView(R.id.day_abbreviation_textview)
         TextView mAbbreviationTextView;
-        @Bind(R.id.day_decription_textview)
+        @BindView(R.id.day_decription_textview)
         TextView mDecriptionTextView;
-        @Bind(R.id.day_today_textview)
+        @BindView(R.id.day_today_textview)
         TextView mTodayTextView;
 
         public ViewHolder(View itemView) {

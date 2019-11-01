@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -28,7 +28,7 @@ import ru.majo.bsutimetable.ui.view.FavoriteView;
  */
 public class FavoriteFragment extends BaseFragment implements FavoriteView{
 
-    @Bind(R.id.favorite_recylcerview)
+    @BindView(R.id.favorite_recylcerview)
     RecyclerView mFavoriteRecyclerView;
 
     @Inject

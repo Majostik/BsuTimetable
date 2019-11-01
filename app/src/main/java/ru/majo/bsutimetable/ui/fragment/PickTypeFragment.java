@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.R;
 import ru.majo.bsutimetable.base.BaseFragment;
@@ -18,7 +18,7 @@ import ru.majo.bsutimetable.ui.adapter.PickTypeAdapter;
  */
 public class PickTypeFragment extends BaseFragment {
 
-    @Bind(R.id.pick_type_recyclerview)
+    @BindView(R.id.pick_type_recyclerview)
     RecyclerView mRecyclerView;
 
     private PickTypeAdapter mAdapter;

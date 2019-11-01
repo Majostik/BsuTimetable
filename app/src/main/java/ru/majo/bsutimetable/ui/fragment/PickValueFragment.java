@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.Application;
 import ru.majo.bsutimetable.R;
@@ -36,13 +36,13 @@ public class PickValueFragment extends BaseFragment implements PickValueView{
 
     public static final String EXTRA_TYPE = "ru.majo.bsutimetable.EXTRA_TYPE";
 
-    @Bind(R.id.pick_value_recyclerview)
+    @BindView(R.id.pick_value_recyclerview)
     RecyclerView mValueRecyclerView;
-    @Bind(R.id.pick_edittext_search)
+    @BindView(R.id.pick_edittext_search)
     EditText mSearchEditText;
-    @Bind(R.id.pick_layout_search)
+    @BindView(R.id.pick_layout_search)
     LinearLayout mSearchLinearLayout;
-    @Bind(R.id.pick_value_fab)
+    @BindView(R.id.pick_value_fab)
     FloatingActionButton mSearchFab;
 
     @Inject

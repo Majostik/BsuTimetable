@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.majo.bsutimetable.R;
 import ru.majo.bsutimetable.model.Timetable;
@@ -65,17 +66,17 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        @Bind(R.id.timetable_item_auditory)
+        @BindView(R.id.timetable_item_auditory)
         TextView mAuditoryTextView;
-        @Bind(R.id.timetable_item_discipline)
+        @BindView(R.id.timetable_item_discipline)
         TextView mDisciplineTextView;
-        @Bind(R.id.timetable_item_teacher)
+        @BindView(R.id.timetable_item_teacher)
         TextView mTeacherTextView;
-        @Bind(R.id.timetable_item_time)
+        @BindView(R.id.timetable_item_time)
         TextView mTimeTextView;
-        @Bind(R.id.timetable_item_type_textview)
+        @BindView(R.id.timetable_item_type_textview)
         TextView mLessonTypeTextView;
-        @Bind(R.id.timetable_item_type_image)
+        @BindView(R.id.timetable_item_type_image)
         ImageView mTypeImageView;
 
         public ViewHolder(View itemView) {

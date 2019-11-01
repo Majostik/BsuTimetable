@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.drakeet.materialdialog.MaterialDialog;
 import ru.majo.bsutimetable.Application;
@@ -37,13 +37,13 @@ import ru.majo.bsutimetable.utils.TimetableUtils;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, MainView {
 
-    @Bind(R.id.toolbar_text)
+    @BindView(R.id.toolbar_text)
     TextView mToolbarTitle;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
-    @Bind(R.id.navigation_view)
+    @BindView(R.id.navigation_view)
     NavigationView mNavigationView;
 
     View mHeaderView;
